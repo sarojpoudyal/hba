@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'hotels/show'
+
   root 'welcome#index'
    get 'query', to: 'locations#show'
    resources :location, only:[:show]
+   resources :hotels, only:[:show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

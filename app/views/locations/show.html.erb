@@ -6,8 +6,8 @@
 <% @location.hotels.each do |hotel| %>
 <div class="col-md-4">
   <div class="hotel">
-          <%=  image_tag (hotel.name.downcase+".jpg"), class: "img-responsive" %>
-          <%= hotel.name %>
+          <%= link_to (image_tag (hotel.name.downcase+".jpg")), hotel_path(hotel), class: "img-responsive" %>
+          <%= link_to hotel.name, hotel_path(hotel) %>
           <%= hotel.address %>
         </div>
       </div>

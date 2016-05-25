@@ -1,0 +1,14 @@
+<div class="hotel">
+        <%= image_tag (@hotel.name.downcase+".jpg"), class: "img-responsive" %>
+        <%= @hotel.name %>
+        <%= @hotel.address %>
+      </div>
+<h2>Options available in the hotel</h2>
+
+<% @hotel.rooms.each do |room| %>
+<div class="room">
+  <%= image_tag (@hotel.name.downcase+"_"+room.room_type+".jpg") %>
+  <%= room.room_type %>
+  <button>Book Now</button>
+</div>
+<% end %>
