@@ -1,0 +1,30 @@
+<h5>Search Hotel</h5>
+
+
+
+
+
+<%= form_for :location, url: location_path do |f| %>
+  <%= f.text_field :name, class: "form-control", title: "Enter a Location or City", placeholder: "Enter a Location or City", id: "autocomplete" %>
+
+  <%= f.submit  "Search" %>
+<% end %>
+
+
+<script type="text/javascript">
+
+var availableTags = [
+  "Sikkim",
+  "West Bengal",
+  "Gangtok",
+  "Ravangla",
+  "Pelling",
+  "Kalimpong",
+  "Darjeeling",
+  "Siliguri"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+</script>
