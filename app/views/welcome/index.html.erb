@@ -4,11 +4,15 @@
 
 
 
-<%= form_for :location, url: location_path do |f| %>
-  <%= f.text_field :name, class: "form-control", title: "Enter a Location or City", placeholder: "Enter a Location or City", id: "autocomplete" %>
-
-  <%= f.submit  "Search" %>
+ <%= form_tag 'query', method: :get, class: "navbar-form navbar-left search-form" do %>
+  <%= text_field_tag(
+      :search,
+      params[:location],
+      placeholder: "Search",
+      class: "form-control"
+  ) %>
 <% end %>
+
 
 
 <script type="text/javascript">
