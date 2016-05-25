@@ -1,2 +1,17 @@
 <h1>This is the search result of the location</h1>
 <%= @location.name %>
+  <div class="container">
+    <div class="row">
+
+<% @location.hotels.each do |hotel| %>
+<div class="col-md-4">
+  <div class="hotel">
+          <%=  image_tag (hotel.name.downcase+".jpg"), class: "img-responsive" %>
+          <%= hotel.name %>
+          <%= hotel.address %>
+        </div>
+      </div>
+
+<% end %>
+</div>
+</div>

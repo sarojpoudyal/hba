@@ -9,7 +9,8 @@
       :search,
       params[:location],
       placeholder: "Search",
-      class: "form-control"
+      class: "form-control",
+      id: "autocomplete"
   ) %>
 <% end %>
 
@@ -18,8 +19,6 @@
 <script type="text/javascript">
 
 var availableTags = [
-  "Sikkim",
-  "West Bengal",
   "Gangtok",
   "Ravangla",
   "Pelling",
